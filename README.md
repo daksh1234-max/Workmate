@@ -1,12 +1,12 @@
-# WorMate - AI-Powered Labour Hiring Platform
+# WorkMate - AI-Powered Hiring Platform
 
-A complete, fully working local version of the WorMate labour hiring platform with AI-generated images, real-time chat, and intelligent job matching.
+A complete, fully working local version of the WorkMate hiring platform with AI-generated images, real-time chat, and intelligent job matching.
 
 ## 🚀 Features
 
 ### Authentication & User Management
 - JWT-based authentication with bcrypt password hashing
-- Role-based access control (Contractor/Labourer)
+- Role-based access control (Contractor/Job Seeker)
 - AI-generated avatars for new users
 - Secure login/signup system
 
@@ -14,10 +14,10 @@ A complete, fully working local version of the WorMate labour hiring platform wi
 - Post jobs with detailed information (title, description, skills, wage, location, duration)
 - AI-generated job images based on skills and requirements
 - View and manage job applications
-- Accept/reject labourer applications
+- Accept/reject job seeker applications
 - Real-time notifications for new applications
 
-### Labourer Dashboard
+### Job Seeker Dashboard
 - Create and manage detailed profiles (skills, experience, location, languages)
 - AI-generated profile pictures
 - Browse and search for nearby jobs
@@ -26,8 +26,8 @@ A complete, fully working local version of the WorMate labour hiring platform wi
 
 ### AI-Powered Features
 - Smart job matching based on skills, experience, and location
-- Labourer recommendations for contractors
-- Job recommendations for labourers
+- Job seeker recommendations for contractors
+- Job recommendations for job seekers
 - Intelligent scoring algorithm with detailed reasoning
 
 ### Real-time Communication
@@ -119,7 +119,7 @@ Language files are located in the `messages/` directory and can be easily extend
 
 ## 🔐 Authentication Flow
 
-1. **Signup**: Users can create accounts as either contractors or labourers
+1. **Signup**: Users can create accounts as either contractors or job seekers
 2. **Login**: JWT-based authentication with secure password verification
 3. **Role-based Access**: Different dashboards and permissions based on user role
 4. **Session Management**: Secure token storage and validation
@@ -127,7 +127,7 @@ Language files are located in the `messages/` directory and can be easily extend
 ## 🤖 AI Features
 
 ### Job Matching Algorithm
-- **Skill Matching** (40-50% weight): Compares labourer skills with job requirements
+- **Skill Matching** (40-50% weight): Compares job seeker skills with job requirements
 - **Experience Bonus** (20-30% weight): Rewards experienced workers
 - **Location Matching** (20-30% weight): Prioritizes nearby opportunities
 - **Contractor Rating** (10% weight): Considers contractor reputation
@@ -149,7 +149,7 @@ Language files are located in the `messages/` directory and can be easily extend
 
 ### Applications
 - `GET /api/applications` - Get applications for jobs/users
-- `POST /api/applications` - Apply for a job (labourers only)
+- `POST /api/applications` - Apply for a job (job seekers only)
 - `PATCH /api/applications` - Update application status (contractors only)
 
 ### AI Recommendations
@@ -257,4 +257,4 @@ For support and questions:
 
 ---
 
-**WorMate** - Connecting skilled labour with quality work opportunities through AI-powered matching and real-time communication.
+**WorkMate** - Connecting talented job seekers with quality work opportunities through AI-powered matching and real-time communication.

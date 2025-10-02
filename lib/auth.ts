@@ -27,7 +27,7 @@ export function verifyToken(token: string): any {
   }
 }
 
-export function getTokenFromHeader(authHeader: string | undefined): string | null {
+export function getTokenFromHeader(authHeader: string | null | undefined): string | null {
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return null;
   }

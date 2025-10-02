@@ -4,7 +4,7 @@ import { verifyToken, getTokenFromHeader } from '@/lib/auth';
 
 export async function PATCH(request: NextRequest) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(

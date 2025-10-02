@@ -228,7 +228,7 @@ export default function ApplicationsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div className={`p-4 rounded-lg ${theme === 'LIGHT' ? 'bg-gray-50' : 'bg-gray-700'}`}>
                     <h4 className={`font-medium mb-2 ${theme === 'LIGHT' ? 'text-gray-900' : 'text-white'}`}>
-                      Labourer Details
+                      Job Seeker Details
                     </h4>
                     <div className="space-y-1 text-sm">
                       <div className={`flex items-center ${theme === 'LIGHT' ? 'text-gray-600' : 'text-gray-400'}`}>

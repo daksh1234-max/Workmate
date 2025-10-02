@@ -5,7 +5,7 @@ import { verifyToken, getTokenFromHeader } from '@/lib/auth';
 // GET /api/applications - Get applications for a user or job
 export async function GET(request: NextRequest) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(
@@ -93,7 +93,7 @@ export async function GET(request: NextRequest) {
         );
       }
     } else if (decoded.role === 'labourer' && userId) {
-      // Labourer viewing their own applications
+      // Job seeker viewing their own applications
       applications = await prisma.application.findMany({
         where: { labourerId: parseInt(userId) },
         include: {
@@ -139,7 +139,7 @@ export async function GET(request: NextRequest) {
 // POST /api/applications - Apply for a job
 export async function POST(request: NextRequest) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(
@@ -151,7 +151,7 @@ export async function POST(request: NextRequest) {
     const decoded = verifyToken(token);
     if (!decoded || decoded.role !== 'labourer') {
       return NextResponse.json(
-        { error: 'Only labourers can apply for jobs' },
+        { error: 'Only job seekers can apply for jobs' },
         { status: 403 }
       );
     }
@@ -238,7 +238,7 @@ export async function POST(request: NextRequest) {
 // PATCH /api/applications - Update application status
 export async function PATCH(request: NextRequest) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(

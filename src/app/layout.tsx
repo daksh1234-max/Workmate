@@ -7,8 +7,8 @@ import NotificationSystem from '@/components/NotificationSystem';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'WorMate - Labour Hiring Platform',
-  description: 'AI-powered labour hiring platform connecting contractors and labourers',
+  title: 'WorkMate - Job Seeker Hiring Platform',
+  description: 'AI-powered hiring platform connecting contractors and job seekers',
 };
 
 export default function RootLayout({

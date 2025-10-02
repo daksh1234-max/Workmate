@@ -5,7 +5,7 @@ import { getJobRecommendationsForLabourer, getLabourerRecommendationsForJob } fr
 // GET /api/ai/recommendations - Get AI recommendations
 export async function GET(request: NextRequest) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(
@@ -70,7 +70,7 @@ export async function GET(request: NextRequest) {
 // POST /api/ai/recommendations - Generate new recommendations
 export async function POST(request: NextRequest) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(

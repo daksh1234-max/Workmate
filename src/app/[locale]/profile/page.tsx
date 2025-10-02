@@ -203,7 +203,7 @@ export default function ProfilePage() {
                   {user.name}
                 </h2>
                 <p className={`text-sm mb-4 ${theme === 'LIGHT' ? 'text-gray-600' : 'text-gray-400'}`}>
-                  {user.role === 'contractor' ? 'Contractor' : 'Labourer'}
+                  {user.role === 'contractor' ? 'Contractor' : 'Job Seeker'}
                 </p>
                 
                 {/* Profile Completion */}

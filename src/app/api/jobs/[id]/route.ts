@@ -68,7 +68,7 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(
@@ -168,7 +168,7 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(

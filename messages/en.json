@@ -1,6 +1,6 @@
 {
   "common": {
-    "welcome": "Welcome to WorMate",
+    "welcome": "Welcome to WorkMate",
     "loading": "Loading...",
     "error": "An error occurred",
     "success": "Success!",
@@ -30,7 +30,7 @@
     "name": "Name",
     "role": "Role",
     "contractor": "Contractor",
-    "labourer": "Labourer",
+    "labourer": "Job Seeker",
     "forgotPassword": "Forgot Password?",
     "rememberMe": "Remember Me",
     "alreadyHaveAccount": "Already have an account?",
@@ -122,7 +122,7 @@
   "ai": {
     "recommendations": "AI Recommendations",
     "suggestedJobs": "Suggested Jobs",
-    "suggestedLabourers": "Suggested Labourers",
+    "suggestedLabourers": "Suggested Job Seekers",
     "matchScore": "Match Score",
     "aiAssistant": "AI Assistant",
     "getRecommendations": "Get Recommendations"

@@ -38,8 +38,9 @@ export default function ChatSystem({ user, isOpen, onClose, selectedJob, selecte
 
   useEffect(() => {
     if (isOpen) {
-      // Initialize socket connection
-      const newSocket = io('http://localhost:3000');
+      // Initialize socket connection (configurable for prod)
+      const socketUrl = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3000';
+      const newSocket = io(socketUrl);
       setSocket(newSocket);
 
       // Join user room

@@ -75,10 +75,10 @@ export default function HomePage() {
         
         <div className="text-center mb-12">
           <h1 className={`text-5xl font-bold mb-4 ${theme === 'LIGHT' ? 'text-blue-600' : 'text-blue-400'}`}>
-            Welcome to WorMate
+            Welcome to WorkMate
           </h1>
           <p className={`text-xl max-w-2xl mx-auto ${theme === 'LIGHT' ? 'text-gray-600' : 'text-gray-400'}`}>
-            AI-powered labour hiring platform connecting skilled contractors with reliable labourers
+            AI-powered hiring platform connecting skilled contractors with reliable job seekers
           </p>
         </div>
 
@@ -210,7 +210,7 @@ export default function HomePage() {
                         className="mr-2"
                       />
                       <Hammer className="h-5 w-5 text-yellow-500 mr-2" />
-                      <span className={`text-sm ${theme === 'LIGHT' ? 'text-gray-900' : 'text-white'}`}>Labourer</span>
+                      <span className={`text-sm ${theme === 'LIGHT' ? 'text-gray-900' : 'text-white'}`}>Job Seeker</span>
                     </label>
                     <label className={`flex items-center p-3 border rounded-lg cursor-pointer transition-colors ${
                       theme === 'LIGHT' 
@@ -272,7 +272,7 @@ export default function HomePage() {
             <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Hammer className="h-8 w-8 text-yellow-600" />
             </div>
-            <h3 className={`text-xl font-semibold mb-2 ${theme === 'LIGHT' ? 'text-gray-800' : 'text-white'}`}>Verified Labourers</h3>
+            <h3 className={`text-xl font-semibold mb-2 ${theme === 'LIGHT' ? 'text-gray-800' : 'text-white'}`}>Verified Job Seekers</h3>
             <p className={`${theme === 'LIGHT' ? 'text-gray-600' : 'text-gray-400'}`}>Trusted workers with verified skills and ratings</p>
           </div>
           <div className="text-center">

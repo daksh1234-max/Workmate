@@ -5,7 +5,7 @@ import { verifyToken, getTokenFromHeader } from '@/lib/auth';
 // GET /api/messages - Get messages between users
 export async function GET(request: NextRequest) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(
@@ -82,7 +82,7 @@ export async function GET(request: NextRequest) {
 // POST /api/messages - Send a new message
 export async function POST(request: NextRequest) {
   try {
-    const token = getTokenFromHeader(request.headers.get('authorization'));
+    const token = getTokenFromHeader(request.headers.get('authorization') ?? undefined);
     
     if (!token) {
       return NextResponse.json(

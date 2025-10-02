@@ -195,10 +195,10 @@ export default function DashboardPage() {
 
   const handleStartChat = (job: any) => {
     if (user && user.role === 'labourer') {
-      // Labourer wants to chat with contractor
+      // Job seeker wants to chat with contractor
       setChatUser(job.contractor);
     } else {
-      // Contractor wants to chat with labourers who applied
+      // Contractor wants to chat with job seekers who applied
       // For now, we'll show a message to view applications
       showNotification({
         type: 'info',
@@ -256,7 +256,7 @@ export default function DashboardPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className={`text-2xl font-bold ${theme === 'LIGHT' ? 'text-blue-600' : 'text-blue-400'}`}>WorMate</h1>
+              <h1 className={`text-2xl font-bold ${theme === 'LIGHT' ? 'text-blue-600' : 'text-blue-400'}`}>WorkMate</h1>
             </div>
             
             <div className="flex items-center space-x-4">
